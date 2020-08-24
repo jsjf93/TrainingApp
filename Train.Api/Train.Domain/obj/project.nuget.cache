@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Ux89KabH3+51bqTpb0v6pb28HhX3zwADPH0vmw2DvO1q2hxyNp7wcE8iXwjzR23fy1uszybai6VagOnb+QAM+w==",
+  "success": true,
+  "projectFilePath": "C:\\Git\\my-projects\\TrainV2\\Train.Api\\Train.Domain\\Train.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\joshua.foster\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
