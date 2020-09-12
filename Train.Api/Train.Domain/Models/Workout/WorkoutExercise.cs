@@ -32,6 +32,6 @@ namespace Train.Domain.Models
 
         public Order Order { get; private set; }
 
-        public virtual Workout Workout { get; private set; }
+        public virtual Guid WorkoutId { get; private set; }
     }
 }

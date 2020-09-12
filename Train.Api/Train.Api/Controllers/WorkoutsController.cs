@@ -1,11 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Text.Json;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Train.Api.Controllers.Requests;
-using Train.Domain;
 using Train.Domain.Models;
 using Train.Services.CommandHandlers.Interfaces;
 using Train.Services.Commands;
@@ -16,9 +12,9 @@ namespace Train.Api.Controllers
     [ApiController]
     public class WorkoutsController : ControllerBase
     {
-        private readonly ICreateWorkoutCommandHandler handler;
+        private readonly ICreateWorkoutCommandHandler<CreateWorkoutCommand> handler;
 
-        public WorkoutsController(ICreateWorkoutCommandHandler handler)
+        public WorkoutsController(ICreateWorkoutCommandHandler<CreateWorkoutCommand> handler)
         {
             this.handler = handler;
         }

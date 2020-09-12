@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jgCKcwA+P3FG3hS3Uf03+nGo9LEJ5rv1wkNw6s/50QTHJesAruIbtVE1X/hpjBoiC9GAH8iIwrdGlt9vX1tKAg==",
+  "dgSpecHash": "8xnXzl+8w6WiSc5f0oVQdwPL3rD+pNg7Ukye9OQLiRKr+C7HKyMDh0L4fQfnbb0wOfgbrzhW/sQdEQN2/pIrEw==",
   "success": true,
-  "projectFilePath": "C:\\Git\\my-projects\\TrainV2\\Train.Api\\Train.Api\\Train.Api.csproj",
+  "projectFilePath": "C:\\Git\\my-projects\\TrainV2\\TrainV2\\Train.Api\\Train.Api\\Train.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\joshua.foster\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\joshua.foster\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\3.1.7\\microsoft.aspnetcore.jsonpatch.3.1.7.nupkg.sha512",

@@ -5270,11 +5270,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Git\\my-projects\\TrainV2\\Train.Api\\Train.Data\\Train.Data.csproj",
+      "projectUniqueName": "C:\\Git\\my-projects\\TrainV2\\TrainV2\\Train.Api\\Train.Data\\Train.Data.csproj",
       "projectName": "Train.Data",
-      "projectPath": "C:\\Git\\my-projects\\TrainV2\\Train.Api\\Train.Data\\Train.Data.csproj",
+      "projectPath": "C:\\Git\\my-projects\\TrainV2\\TrainV2\\Train.Api\\Train.Data\\Train.Data.csproj",
       "packagesPath": "C:\\Users\\joshua.foster\\.nuget\\packages\\",
-      "outputPath": "C:\\Git\\my-projects\\TrainV2\\Train.Api\\Train.Data\\obj\\",
+      "outputPath": "C:\\Git\\my-projects\\TrainV2\\TrainV2\\Train.Api\\Train.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5293,8 +5293,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Git\\my-projects\\TrainV2\\Train.Api\\Train.Domain\\Train.Domain.csproj": {
-              "projectPath": "C:\\Git\\my-projects\\TrainV2\\Train.Api\\Train.Domain\\Train.Domain.csproj"
+            "C:\\Git\\my-projects\\TrainV2\\TrainV2\\Train.Api\\Train.Domain\\Train.Domain.csproj": {
+              "projectPath": "C:\\Git\\my-projects\\TrainV2\\TrainV2\\Train.Api\\Train.Domain\\Train.Domain.csproj"
             }
           }
         }

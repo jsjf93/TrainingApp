@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <Folder Include="Queries\" />
+    <Folder Include="Repositories\" />
   </ItemGroup>
 
 </Project>

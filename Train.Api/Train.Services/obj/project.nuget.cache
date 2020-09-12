@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FQSIXLFPC7g3GAn/BpZrM4VGtUZBXzW7Lc6agCLCC36CTnz+HO5vsYr7gyul5vvUn/xPgLBKY7QaRVski6BbGw==",
+  "dgSpecHash": "2UKpRxV9hQF8+NYnHZJvDx0r/FSfrwHzmS/x+/sOSdQXzBw1MaeMxFdB+6OCJ4AJPHbAISGT+fqww6UAzLjBgQ==",
   "success": true,
-  "projectFilePath": "C:\\Git\\my-projects\\TrainV2\\Train.Api\\Train.Services\\Train.Services.csproj",
+  "projectFilePath": "C:\\Git\\my-projects\\TrainV2\\TrainV2\\Train.Api\\Train.Services\\Train.Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\joshua.foster\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\joshua.foster\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",

@@ -8,6 +8,7 @@ using Train.Data;
 using Train.Domain.Factories.Interfaces;
 using Train.Services.CommandHandlers;
 using Train.Services.CommandHandlers.Interfaces;
+using Train.Services.Commands;
 using Train.Services.Factories;
 using Train.Services.QueryProcessors;
 using Train.Services.QueryProcessors.Interfaces;
@@ -32,7 +33,7 @@ namespace Train.Api
             services.AddScoped<IWorkoutFactory, WorkoutFactory>();
 
             services.AddScoped<IGetExercisesQueryProcessor, GetExercisesQueryProcessor>();
-            services.AddScoped<ICreateWorkoutCommandHandler, CreateWorkoutCommandHandler>();
+            services.AddScoped<ICreateWorkoutCommandHandler<CreateWorkoutCommand>, CreateWorkoutCommandHandler>();
 
             services
                 .AddControllers()

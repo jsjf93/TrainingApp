@@ -1,4 +1,5 @@
-﻿using System.Text.Json.Serialization;
+﻿using System;
+using System.Text.Json.Serialization;
 using Train.Domain.Converters;
 using Train.Domain.Models.Enums;
 
@@ -21,6 +22,6 @@ namespace Train.Domain.Models.Sets.Base
 
         public Order Order { get; private set; }
 
-        public virtual WorkoutExercise WorkoutExercise { get; private set; }
+        public virtual Guid WorkoutExerciseId { get; private set; }
     }
 }

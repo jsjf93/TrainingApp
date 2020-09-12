@@ -6,7 +6,7 @@ using Train.Services.Commands;
 
 namespace Train.Services.CommandHandlers
 {
-    public class CreateWorkoutCommandHandler : ICreateWorkoutCommandHandler
+    public class CreateWorkoutCommandHandler : ICreateWorkoutCommandHandler<CreateWorkoutCommand>
     {
         private readonly TrainContext context;
 
