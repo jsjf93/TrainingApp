@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Train.Data;
+using Train.Domain.Converters;
 using Train.Domain.Factories.Interfaces;
 using Train.Services.CommandHandlers;
 using Train.Services.CommandHandlers.Interfaces;
@@ -32,7 +33,7 @@ namespace Train.Api
 
             services.AddScoped<IWorkoutFactory, WorkoutFactory>();
 
-            services.AddScoped<IGetExercisesQueryProcessor, GetExercisesQueryProcessor>();
+            services.AddScoped<IGetExercisesQueryProcessor, GetExercisesQueryProcessor>(); 
             services.AddScoped<ICreateWorkoutCommandHandler<CreateWorkoutCommand>, CreateWorkoutCommandHandler>();
 
             services

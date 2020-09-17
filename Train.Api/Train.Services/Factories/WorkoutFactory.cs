@@ -14,8 +14,7 @@ namespace Train.Services.Factories
             JsonConverter[] converters = { new ExerciseSetConverter() };
             var workoutExercises = JsonConvert.DeserializeObject<IEnumerable<WorkoutExercise>>(command.WorkoutExercises.ToString(), new JsonSerializerSettings()
             {
-                Converters = converters,
-                ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+                Converters = converters
             });
 
             var workout = new Workout(command.WorkoutName, workoutExercises);

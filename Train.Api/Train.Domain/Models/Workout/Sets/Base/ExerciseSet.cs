@@ -8,7 +8,7 @@ namespace Train.Domain.Models.Sets.Base
     [JsonConverter(typeof(ExerciseSetConverter))]
     public abstract class ExerciseSet : Entity
     {
-        protected ExerciseSet()
+        public ExerciseSet()
         {
         }
 
@@ -22,6 +22,6 @@ namespace Train.Domain.Models.Sets.Base
 
         public Order Order { get; private set; }
 
-        public virtual Guid WorkoutExerciseId { get; private set; }
+        public virtual WorkoutExercise WorkoutExercise { get; private set; }
     }
 }
