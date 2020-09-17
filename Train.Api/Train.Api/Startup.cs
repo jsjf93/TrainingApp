@@ -29,7 +29,7 @@ namespace Train.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<TrainContext>(opt =>
-               opt.UseInMemoryDatabase("TrainDb"));
+               opt.UseInMemoryDatabase("TrainDb").UseLazyLoadingProxies());
 
             services.AddScoped<IWorkoutFactory, WorkoutFactory>();
 

@@ -13,9 +13,6 @@ namespace Train.Data
         public TrainContext(DbContextOptions<TrainContext> options)
             : base(options)
         {
-            var exercise = new Exercise("Pushups");
-            Exercises.Add(exercise);
-            this.SaveChanges();
         }
 
         public DbSet<Exercise> Exercises { get; set; }

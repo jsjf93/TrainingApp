@@ -28,9 +28,9 @@ C:\Git\my-projects\TrainV2\TrainV2\Train.Api\Train.Data\bin\Debug\netcoreapp3.1\
 C:\Git\my-projects\TrainV2\TrainV2\Train.Api\Train.Data\bin\Debug\netcoreapp3.1\Train.Domain.dll
 C:\Git\my-projects\TrainV2\TrainV2\Train.Api\Train.Data\bin\Debug\netcoreapp3.1\Train.Domain.pdb
 C:\Git\my-projects\TrainV2\TrainV2\Train.Api\Train.Data\obj\Debug\netcoreapp3.1\Train.Data.csprojAssemblyReference.cache
-C:\Git\my-projects\TrainV2\TrainV2\Train.Api\Train.Data\obj\Debug\netcoreapp3.1\Train.Data.csproj.CoreCompileInputs.cache
 C:\Git\my-projects\TrainV2\TrainV2\Train.Api\Train.Data\obj\Debug\netcoreapp3.1\Train.Data.AssemblyInfoInputs.cache
 C:\Git\my-projects\TrainV2\TrainV2\Train.Api\Train.Data\obj\Debug\netcoreapp3.1\Train.Data.AssemblyInfo.cs
 C:\Git\my-projects\TrainV2\TrainV2\Train.Api\Train.Data\obj\Debug\netcoreapp3.1\Train.Data.csproj.CopyComplete
 C:\Git\my-projects\TrainV2\TrainV2\Train.Api\Train.Data\obj\Debug\netcoreapp3.1\Train.Data.dll
 C:\Git\my-projects\TrainV2\TrainV2\Train.Api\Train.Data\obj\Debug\netcoreapp3.1\Train.Data.pdb
+C:\Git\my-projects\TrainV2\TrainV2\Train.Api\Train.Data\obj\Debug\netcoreapp3.1\Train.Data.csproj.CoreCompileInputs.cache

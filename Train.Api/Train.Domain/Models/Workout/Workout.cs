@@ -21,7 +21,7 @@ namespace Train.Domain.Models
 
         public string WorkoutName { get; private set; }
 
-        public IEnumerable<WorkoutExercise> WorkoutExercises { get; private set; }
+        public virtual IEnumerable<WorkoutExercise> WorkoutExercises { get; private set; }
 
     }
 }

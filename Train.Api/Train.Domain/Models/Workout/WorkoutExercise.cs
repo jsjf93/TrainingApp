@@ -28,9 +28,9 @@ namespace Train.Domain.Models
 
         public ExerciseType ExerciseType { get; private set; }
 
-        public IEnumerable<ExerciseSet> ExerciseSets { get; private set; }
+        public virtual IEnumerable<ExerciseSet> ExerciseSets { get; private set; }
 
-        public Order Order { get; private set; }
+        public virtual Order Order { get; private set; }
 
         public virtual Workout Workout { get; private set; }
     }

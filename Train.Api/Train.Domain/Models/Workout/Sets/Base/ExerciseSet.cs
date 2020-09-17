@@ -20,7 +20,7 @@ namespace Train.Domain.Models.Sets.Base
 
         public ExerciseType ExerciseType { get; private set; }
 
-        public Order Order { get; private set; }
+        public virtual Order Order { get; private set; }
 
         public virtual WorkoutExercise WorkoutExercise { get; private set; }
     }
