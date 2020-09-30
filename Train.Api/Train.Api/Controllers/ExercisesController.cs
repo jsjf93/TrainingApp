@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Train.Domain;
-using Train.Services.QueryProcessors.Interfaces;
+using Train.Services.Utils;
 
 namespace Train.Api.Controllers
 {
@@ -9,19 +9,19 @@ namespace Train.Api.Controllers
     [ApiController]
     public class ExercisesController : ControllerBase
     {
-        private readonly IGetExercisesQueryProcessor queryProcessor;
+        private readonly Messages messages;
 
-        public ExercisesController(IGetExercisesQueryProcessor queryProcessor)
+        public ExercisesController(Messages messages)
         {
-            this.queryProcessor = queryProcessor;
+            this.messages = messages;
         }
 
         [HttpGet]
         public ActionResult<List<Exercise>> GetExercises()
         {
-            var result = queryProcessor.Process();
+            //var result = this.messages.Dispatch();
 
-            return result;
+            return Ok();
         }
     }
 }

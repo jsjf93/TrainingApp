@@ -36,10 +36,18 @@ namespace Train.Data
               .Property(p => p.Value)
               .HasColumnName("Order");
 
+            modelBuilder.Entity<ExerciseSet>()
+              .Property(p => p.Id)
+              .ValueGeneratedNever();
+
             modelBuilder.Entity<WorkoutExercise>()
               .OwnsOne(o => o.Order)
               .Property(p => p.Value)
               .HasColumnName("Order");
+
+            modelBuilder.Entity<WorkoutExercise>()
+              .Property(p => p.Id)
+              .ValueGeneratedNever();
         }
     }
 }

@@ -23,5 +23,9 @@ namespace Train.Domain.Models
 
         public virtual IEnumerable<WorkoutExercise> WorkoutExercises { get; private set; }
 
+        public virtual void SetWorkoutExercises(IEnumerable<WorkoutExercise> workoutExercises)
+        {
+            this.WorkoutExercises = workoutExercises;
+        }
     }
 }

@@ -101,8 +101,8 @@ C:\Git\my-projects\TrainNew\Train.Api\Train.Test\bin\Debug\netcoreapp3.1\zh-Hant
 C:\Git\my-projects\TrainNew\Train.Api\Train.Test\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
 C:\Git\my-projects\TrainNew\Train.Api\Train.Test\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Git\my-projects\TrainNew\Train.Api\Train.Test\obj\Debug\netcoreapp3.1\Train.Test.csproj.CoreCompileInputs.cache
-C:\Git\my-projects\TrainV2\TrainV2\Train.Api\Train.Test\bin\Debug\netcoreapp3.1\testhost.exe
 C:\Git\my-projects\TrainV2\TrainV2\Train.Api\Train.Test\bin\Debug\netcoreapp3.1\testhost.dll
+C:\Git\my-projects\TrainV2\TrainV2\Train.Api\Train.Test\bin\Debug\netcoreapp3.1\testhost.exe
 C:\Git\my-projects\TrainV2\TrainV2\Train.Api\Train.Test\bin\Debug\netcoreapp3.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
 C:\Git\my-projects\TrainV2\TrainV2\Train.Api\Train.Test\bin\Debug\netcoreapp3.1\xunit.runner.reporters.netcoreapp10.dll
 C:\Git\my-projects\TrainV2\TrainV2\Train.Api\Train.Test\bin\Debug\netcoreapp3.1\xunit.runner.utility.netcoreapp10.dll

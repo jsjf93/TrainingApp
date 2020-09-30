@@ -2,9 +2,9 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Train.Api.Controllers.Requests;
-using Train.Domain.Models;
 using Train.Services.CommandHandlers.Interfaces;
 using Train.Services.Commands;
+using Train.Services.Utils;
 
 namespace Train.Api.Controllers
 {
@@ -12,17 +12,17 @@ namespace Train.Api.Controllers
     [ApiController]
     public class WorkoutsController : ControllerBase
     {
-        private readonly ICreateWorkoutCommandHandler<CreateWorkoutCommand> handler;
+        private readonly Messages messages;
 
-        public WorkoutsController(ICreateWorkoutCommandHandler<CreateWorkoutCommand> handler)
+        public WorkoutsController(Messages messages)
         {
-            this.handler = handler;
+            this.messages = messages;
         }
 
         [HttpPost]
-        public Workout CreateWorkout([FromBody] JObject jObject)
+        public IActionResult CreateWorkout([FromBody] JObject jObject)
         {
-            CreateWorkoutRequest request = JsonConvert.DeserializeObject<CreateWorkoutRequest>(jObject.ToString());
+            var request = JsonConvert.DeserializeObject<CreateWorkoutRequest>(jObject.ToString());
 
             var command = new CreateWorkoutCommand()
             {
@@ -30,9 +30,26 @@ namespace Train.Api.Controllers
                 WorkoutExercises = request.WorkoutExercises
             };
 
-            var result = this.handler.Execute(command);
+            messages.Dispatch(command);
 
-            return result;
+            return Ok();
+        }
+
+        [HttpPut]
+        public IActionResult UpdateWorkout([FromBody] JObject jObject)
+        {
+            var request = JsonConvert.DeserializeObject<UpdateWorkoutRequest>(jObject.ToString());
+
+            var command = new UpdateWorkoutCommand()
+            {
+                Id = request.Id,
+                WorkoutName = request.WorkoutName,
+                WorkoutExercises = request.WorkoutExercises
+            };
+
+            messages.Dispatch(command);
+
+            return Ok();
         }
     }
 }
