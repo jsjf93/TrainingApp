@@ -4,14 +4,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Train.Api.Extensions;
 using Train.Data;
 using Train.Domain.Factories.Interfaces;
-using Train.Services.CommandHandlers;
-using Train.Services.CommandHandlers.Interfaces;
-using Train.Services.Commands;
 using Train.Services.Factories;
 using Train.Services.Factories.Interfaces;
-using Train.Services.Utils;
 
 namespace Train.Api
 {
@@ -26,16 +23,13 @@ namespace Train.Api
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.WithMediatR();
+
             services.AddDbContext<TrainContext>(opt =>
                opt.UseInMemoryDatabase("TrainDb").UseLazyLoadingProxies());
 
             services.AddScoped<IWorkoutFactory, WorkoutFactory>();
             services.AddScoped<IWorkoutExercisesFactory, WorkoutExercisesFactory>();
-
-            services.AddScoped<Messages>();
-
-            services.AddTransient<ICommandHandler<CreateWorkoutCommand>, CreateWorkoutCommandHandler>();
-            services.AddTransient<ICommandHandler<UpdateWorkoutCommand>, UpdateWorkoutCommandHandler>();
 
             services
                 .AddControllers()

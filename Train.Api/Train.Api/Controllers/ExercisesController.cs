@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Train.Domain;
-using Train.Services.Utils;
 
 namespace Train.Api.Controllers
 {
@@ -9,11 +8,8 @@ namespace Train.Api.Controllers
     [ApiController]
     public class ExercisesController : ControllerBase
     {
-        private readonly Messages messages;
-
-        public ExercisesController(Messages messages)
+        public ExercisesController()
         {
-            this.messages = messages;
         }
 
         [HttpGet]

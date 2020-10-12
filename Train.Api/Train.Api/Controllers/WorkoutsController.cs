@@ -1,10 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.Threading.Tasks;
+using MediatR;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Train.Api.Controllers.Requests;
-using Train.Services.CommandHandlers.Interfaces;
 using Train.Services.Commands;
-using Train.Services.Utils;
 
 namespace Train.Api.Controllers
 {
@@ -12,15 +12,15 @@ namespace Train.Api.Controllers
     [ApiController]
     public class WorkoutsController : ControllerBase
     {
-        private readonly Messages messages;
+        private readonly IMediator mediator;
 
-        public WorkoutsController(Messages messages)
+        public WorkoutsController(IMediator mediator)
         {
-            this.messages = messages;
+            this.mediator = mediator;
         }
 
         [HttpPost]
-        public IActionResult CreateWorkout([FromBody] JObject jObject)
+        public async Task<IActionResult> CreateWorkout([FromBody] JObject jObject)
         {
             var request = JsonConvert.DeserializeObject<CreateWorkoutRequest>(jObject.ToString());
 
@@ -30,13 +30,14 @@ namespace Train.Api.Controllers
                 WorkoutExercises = request.WorkoutExercises
             };
 
-            messages.Dispatch(command);
+            // Todo: change guid result to proper response object
+            var result = await this.mediator.Send(command);
 
-            return Ok();
+            return Ok(result);
         }
 
         [HttpPut]
-        public IActionResult UpdateWorkout([FromBody] JObject jObject)
+        public async Task<IActionResult> UpdateWorkout([FromBody] JObject jObject)
         {
             var request = JsonConvert.DeserializeObject<UpdateWorkoutRequest>(jObject.ToString());
 
@@ -47,7 +48,7 @@ namespace Train.Api.Controllers
                 WorkoutExercises = request.WorkoutExercises
             };
 
-            messages.Dispatch(command);
+            await this.mediator.Send(command);
 
             return Ok();
         }

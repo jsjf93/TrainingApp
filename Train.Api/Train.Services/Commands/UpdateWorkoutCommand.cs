@@ -1,10 +1,10 @@
 ﻿using System;
+using MediatR;
 using Newtonsoft.Json.Linq;
-using Train.Services.Commands.Interfaces;
 
 namespace Train.Services.Commands
 {
-    public class UpdateWorkoutCommand : ICommand
+    public class UpdateWorkoutCommand : IRequest
     {
         public Guid Id { get; set; }
 

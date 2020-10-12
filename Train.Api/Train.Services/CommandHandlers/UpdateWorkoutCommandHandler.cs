@@ -1,13 +1,15 @@
 ﻿using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Train.Data;
-using Train.Services.CommandHandlers.Interfaces;
 using Train.Services.Commands;
 using Train.Services.Factories.Interfaces;
 
 namespace Train.Services.CommandHandlers
 {
-    public sealed class UpdateWorkoutCommandHandler : ICommandHandler<UpdateWorkoutCommand>
+    public sealed class UpdateWorkoutCommandHandler : IRequestHandler<UpdateWorkoutCommand>
     {
         private readonly TrainContext context;
         private readonly IWorkoutExercisesFactory factory;
@@ -18,7 +20,7 @@ namespace Train.Services.CommandHandlers
             this.factory = factory;
         }
 
-        public void Execute(UpdateWorkoutCommand command)
+        public Task<Unit> Handle(UpdateWorkoutCommand command, CancellationToken cancellationToken)
         {
             var workoutExercises = this.factory.Create(command);
             var workout = this.context.Workouts
@@ -28,9 +30,11 @@ namespace Train.Services.CommandHandlers
 
             if (workout != null)
             {
-                workout.SetWorkoutExercises(workoutExercises);
+                workout.Update(command.WorkoutName, workoutExercises);
                 this.context.SaveChanges();
             }
+
+            return Task.FromResult(Unit.Value);
         }
     }
 }

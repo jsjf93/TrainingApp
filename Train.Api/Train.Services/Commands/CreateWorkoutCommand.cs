@@ -1,9 +1,10 @@
-﻿using Newtonsoft.Json.Linq;
-using Train.Services.Commands.Interfaces;
+﻿using System;
+using MediatR;
+using Newtonsoft.Json.Linq;
 
 namespace Train.Services.Commands
 {
-    public sealed class CreateWorkoutCommand : ICommand
+    public sealed class CreateWorkoutCommand : IRequest<Guid>
     {
         public string WorkoutName { get; set; }
 

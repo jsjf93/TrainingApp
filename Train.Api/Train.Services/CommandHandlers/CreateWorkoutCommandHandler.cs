@@ -1,11 +1,14 @@
-﻿using Train.Data;
+﻿using System;
+using System.Threading;
+using System.Threading.Tasks;
+using MediatR;
+using Train.Data;
 using Train.Domain.Factories.Interfaces;
-using Train.Services.CommandHandlers.Interfaces;
 using Train.Services.Commands;
 
 namespace Train.Services.CommandHandlers
 {
-    public sealed class CreateWorkoutCommandHandler : ICommandHandler<CreateWorkoutCommand>
+    public sealed class CreateWorkoutCommandHandler : IRequestHandler<CreateWorkoutCommand, Guid>
     {
         private readonly TrainContext context;
 
@@ -17,12 +20,14 @@ namespace Train.Services.CommandHandlers
             this.factory = factory;
         }
 
-        public void Execute(CreateWorkoutCommand command)
+        public Task<Guid> Handle(CreateWorkoutCommand command, CancellationToken cancellationToken)
         {
             var workout = this.factory.Create(command);
 
             this.context.Workouts.Add(workout);
             this.context.SaveChanges();
+
+            return Task.FromResult(workout.Id);
         }
     }
 }
