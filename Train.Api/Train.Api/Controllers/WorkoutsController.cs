@@ -52,5 +52,14 @@ namespace Train.Api.Controllers
 
             return Ok();
         }
+
+        [HttpDelete]
+        public async Task<IActionResult> DeleteWorkout([FromBody] DeleteWorkoutRequest request)
+        {
+            var command = new DeleteWorkoutCommand() { WorkoutId = request.WorkoutId };
+            await this.mediator.Send(command);
+
+            return Ok();
+        }
     }
 }

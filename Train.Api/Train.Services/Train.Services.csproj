@@ -10,6 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="QueryHandler\" />
     <Folder Include="Repositories\" />
   </ItemGroup>
 

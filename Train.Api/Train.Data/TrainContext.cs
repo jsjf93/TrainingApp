@@ -25,6 +25,7 @@ namespace Train.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            // Todo: abstract this
             modelBuilder.Entity<ExerciseSet>()
               .HasDiscriminator(p => p.ExerciseType)
               .HasValue<StrengthSet>(ExerciseType.Strength)
@@ -48,6 +49,17 @@ namespace Train.Data
             modelBuilder.Entity<WorkoutExercise>()
               .Property(p => p.Id)
               .ValueGeneratedNever();
+
+            modelBuilder.Entity<Workout>()
+                .HasMany(w => w.WorkoutExercises)
+                .WithOne(w => w.Workout)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<WorkoutExercise>()
+                .HasMany(w => w.ExerciseSets)
+                .WithOne(s => s.WorkoutExercise)
+                .OnDelete(DeleteBehavior.Cascade);
+                
         }
     }
 }
